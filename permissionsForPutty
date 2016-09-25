@@ -1,0 +1,11 @@
+
+Give permissions through putty, so that we can upload files directly using FileZilla
+
+To allow user ec2-user (Amazon AWS) write access to the public web directory (/var/www/html),
+enter this command via Putty or Terminal, as the root user sudo:
+
+chown -R ec2-user /var/www/html
+
+Make sure permissions on that entire folder were correct:
+
+chmod -R 755 /var/www/html
