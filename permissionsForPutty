@@ -9,3 +9,23 @@ chown -R ec2-user /var/www/html
 Make sure permissions on that entire folder were correct:
 
 chmod -R 755 /var/www/html
+
+// squireel mail
+https://avix.co/blog/creating-your-own-mail-server-amazon-ec2-postfix-dovecot-postgresql-amavis-spamassassin-apache-and-squirrelmail-part-2/
+
+
+INSERT INTO users (
+    email, 
+    password, 
+    realname
+    ) VALUES (
+    'finance@boosthubs.com', 
+    '{SSHA512}XnIchuVlzv0fOP8QCRV0cwCmt3Sul7yz6XYh/54qIdnMD2kiMPAxBSyE/w819/Se72zaSTjRQZ1fNQ5mH5/OJrvuTbQ=', 
+    'Grey Valley Infotech' 
+    );
+
+// to generate password 
+doveadm pw -s SSHA512 -p "password Value"
+
+// for deleting the 
+DELETE FROM users WHERE users.email = 'shaurya.badsar';
