@@ -37,3 +37,10 @@ Custom TCP RUle- 587
 HTTPS
 LDAP
 MemCache - 11211
+
+remove Zimbra
+
+sudo ./install.sh -u
+cd ..
+sudo rm -rf zcs-*
+
