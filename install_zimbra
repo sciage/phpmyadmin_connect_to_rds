@@ -1,0 +1,39 @@
+apt-get update
+apt-get upgrade
+apt-get install -y libperl5.18 sysstat sqlite3 pax libhttp-date-perl
+apt-get install -y libgetopt-mixed-perl libgmp10
+apt-get install -y libmime-explode-perl file lvm2 libaio1
+
+service apparmor stop
+update-rc.d -f apparmor remove
+apt-get remove apparmor apparmor-utils
+
+sudo nano /etc/hosts
+-- host IP address  mail.website.com
+
+sudo nano /etc/hostname
+-- mail.website.com
+
+sudo reboot
+
+cd /tmp/
+wget -c https://files.zimbra.com/downloads/8.7.1_GA/zcs-8.7.1_GA_1670.UBUNTU14_64.20161025045105.tgz
+tar -xvf zcs-8.7.1_GA_1670.UBUNTU14_64.20161025045105.tgz
+cd zcs-*
+sudo ./install.sh
+
+Amazon Server settings
+
+Ports opened inside Amazon EC2 security group
+
+HTTP
+MYSQL
+IMAPS
+SSH
+SMTP
+IMAP
+SMTPS
+Custom TCP RUle- 587
+HTTPS
+LDAP
+MemCache - 11211
