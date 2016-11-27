@@ -1,3 +1,13 @@
+Install Phpmyadmin to Ubuntu 16.04
+
+    sudo apt-get updatesudo systemctl restart apache2
+    sudo apt-get install phpmyadmin php-mbstring php-gettext
+
+    sudo phpenmod mcrypt
+    sudo phpenmod mbstring
+
+
+
 
 Give permissions through putty, so that we can upload files directly using FileZilla
 
