@@ -1,0 +1,35 @@
+{
+  "Message1": {
+    "id": "1",
+    "text": "message text",
+    "createdAt": "timestamp",
+    "User1": {
+      "id": "1",
+      "username": "harish",
+      "avatarUrl": "imageUrl",
+      "isOnline": "true"
+    }
+  },
+  "Message2": {
+    "id": "2",
+    "text": "message text 2",
+    "createdAt": "timestamp",
+    "User2": {
+      "id": "2",
+      "username": "harish2",
+      "avatarUrl": "avatar url",
+      "isOnline": "false"
+    }
+  },
+  "Message3": {
+    "id": "3",
+    "text": "message 3",
+    "createdAt": "timestamp",
+    "User3": {
+      "id": "3",
+      "username": "harish3",
+      "avatarUrl": "avatarUrl",
+      "isOnline": "true"
+    }
+  }
+}
