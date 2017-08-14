@@ -1,0 +1,19 @@
+cd C:/
+cd Users/huyle/Downloads
+ls -lah
+chmod 600 personal-website.pem
+chown :Users personal-website.pem
+ssh -i personal-website.pem ubuntu@publicip
+sudo fdisk -l
+sudo mount /dev/xvdf1 /mnt
+cp ~/.ssh/authorized_keys /mnt/home/ubuntu/.ssh/authorized_keys
+sudo umount /mnt
+
+
+
+
+Instance ID 
+
+i-03af0c9f
+
+Subnet - availability zone - us-east-1d
