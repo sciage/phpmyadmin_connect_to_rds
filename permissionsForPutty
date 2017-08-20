@@ -1,6 +1,13 @@
 audio ffempeg converter
 http://androidwarzone.blogspot.co.il/2011/12/ffmpeg4android.html
 
+Clear Apache Log
+
+    Open a shell as root. sudo su.
+    Change directory. cd /var/log/apache2/
+    Remove all the files. rm -rf /var/log/apache2/*
+    Reload Apache. service apache2 reload.
+
 
 
 https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-ubuntu-16-04
