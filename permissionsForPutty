@@ -1,6 +1,43 @@
 audio ffempeg converter
 http://androidwarzone.blogspot.co.il/2011/12/ffmpeg4android.html
 
+/etc/apache2/sites-enabled/misterioterror.com.conf
+
+<VirtualHost *:80>
+        ServerName misterioterror.com
+        ServerAlias www.misterioterror.com
+        ServerAdmin admin@misterioterror.com
+        ErrorLog ${APACHE_LOG_DIR}/error.log
+        CustomLog ${APACHE_LOG_DIR}/access.log combined
+        Redirect / https://misterioterror.com/
+</VirtualHost>
+
+/etc/apache2/sites-enabled/misterioterror.com-le-ssl.conf
+
+<IfModule mod_ssl.c>
+<VirtualHost *:443>
+        ServerName www.misterioterror.com
+        ServerAdmin admin@misterioterror.com
+        ErrorLog ${APACHE_LOG_DIR}/error.log
+        CustomLog ${APACHE_LOG_DIR}/access.log combined
+        SSLCertificateFile /etc/letsencrypt/live/misterioterror.com/fullchain.pem
+        SSLCertificateKeyFile /etc/letsencrypt/live/misterioterror.com/privkey.pem
+        Include /etc/letsencrypt/options-ssl-apache.conf
+        Redirect / https://misterioterror.com/
+</VirtualHost>
+
+<VirtualHost *:443>
+        ServerName misterioterror.com
+        ServerAdmin admin@misterioterror.com
+        DocumentRoot /var/www/misterioterror.com/public_html
+        ErrorLog ${APACHE_LOG_DIR}/error.log
+        CustomLog ${APACHE_LOG_DIR}/access.log combined
+        SSLCertificateFile /etc/letsencrypt/live/misterioterror.com/fullchain.pem
+        SSLCertificateKeyFile /etc/letsencrypt/live/misterioterror.com/privkey.pem
+        Include /etc/letsencrypt/options-ssl-apache.conf
+</VirtualHost>
+</IfModule>
+
 Clear Apache Log
 
     Open a shell as root. sudo su.
