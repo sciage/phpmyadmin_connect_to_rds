@@ -3,6 +3,24 @@ http://androidwarzone.blogspot.co.il/2011/12/ffmpeg4android.html
 
 /etc/apache2/sites-enabled/misterioterror.com.conf
 
+
+// Add mysql logs
+    Edit your /etc/mysql/my.cnfand add the following at the end of the file :
+
+    [mysqld]
+    general_log_file = /var/log/mysql/mysql.log
+    general_log = 1
+
+    Connect through mysql (mysql -u root -p) and run :
+
+    SET general_log = 1;
+
+    Restart mysql :
+
+    sudo service mysql restart 
+
+
+
 <VirtualHost *:80>
         ServerName misterioterror.com
         ServerAlias www.misterioterror.com
