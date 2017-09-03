@@ -1,6 +1,8 @@
 See the log file in GZIP format
 zcat -f mysql.log.1.gz
 
+http://www.hexatier.com/mysql-database-security-best-practices-2/
+
 audio ffempeg converter
 http://androidwarzone.blogspot.co.il/2011/12/ffmpeg4android.html
 
