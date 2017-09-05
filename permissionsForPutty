@@ -1,6 +1,14 @@
 See the log file in GZIP format
 zcat -f mysql.log.1.gz
 
+
+    Open the command prompt and cd to your directory that you want to archive.
+    <tomcat_home>\webapps\michael
+    Use the Java Archive Command “jar” to bundle up the application
+    jar -cvf michael.war *
+    After finishing, you will see a michael.war file in that directory.
+
+
 http://www.hexatier.com/mysql-database-security-best-practices-2/
 
 audio ffempeg converter
