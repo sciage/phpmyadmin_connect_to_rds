@@ -1,6 +1,7 @@
 See the log file in GZIP format
 zcat -f mysql.log.1.gz
 
+nginx settings - etc/nginx/nginx.conf
 
     Open the command prompt and cd to your directory that you want to archive.
     <tomcat_home>\webapps\michael
