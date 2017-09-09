@@ -3,6 +3,13 @@ zcat -f mysql.log.1.gz
 
 nginx settings - etc/nginx/nginx.conf
 
+block jorgee insie server block of nginx.conf
+ ## Block common/malicious user agents ##
+        if ($http_user_agent ~* LWP::Simple|BBBike|wget|jorgee) {
+            return 403;
+        }
+        
+
     Open the command prompt and cd to your directory that you want to archive.
     <tomcat_home>\webapps\michael
     Use the Java Archive Command “jar” to bundle up the application
