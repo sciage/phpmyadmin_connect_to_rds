@@ -3,6 +3,15 @@ zcat -f mysql.log.1.gz
 
 nginx settings - etc/nginx/nginx.conf
 
+redirect http to https in nginx
+
+server {
+	listen 80 default_server;
+	listen [::]:80 default_server;
+	server_name example.com www.example.com;
+	return 301 https://website.com;
+}
+
 block jorgee insie server block of nginx.conf
  ## Block common/malicious user agents ##
         if ($http_user_agent ~* LWP::Simple|BBBike|wget|jorgee) {
