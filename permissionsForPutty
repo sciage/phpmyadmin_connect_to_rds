@@ -1,6 +1,15 @@
 See the log file in GZIP format
 zcat -f mysql.log.1.gz
 
+install Tomcat 8
+
+wget http://ftp.riken.jp/net/apache/tomcat/tomcat-8/v8.5.20/bin/apache-tomcat-8.5.20.tar.gz
+
+tar xvzf apache-tomcat-8.5.20.tar.gz
+mv apache-tomcat-8.5.20 /opt/tomcat
+
+export JAVA_HOME=/usr/lib/jvm/java-8-oracle/bin
+
 Install Java 8 on ubuntu
 
 sudo add-apt-repository ppa:webupd8team/java
