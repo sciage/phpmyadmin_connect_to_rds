@@ -1,6 +1,13 @@
 See the log file in GZIP format
 zcat -f mysql.log.1.gz
 
+Install Java 8 on ubuntu
+
+sudo add-apt-repository ppa:webupd8team/java
+$ sudo apt-get update
+$ sudo apt-get install oracle-java8-installer
+java -version
+
 nginx settings - etc/nginx/nginx.conf
 
 redirect http to https in nginx
