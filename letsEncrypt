@@ -1,0 +1,40 @@
+renew Let's Encrypt certificate
+key saved
+
+Congratulations! Your certificate and chain have been saved at:
+   /etc/letsencrypt/live/beacandid.com/fullchain.pem
+
+   Your key file has been saved at:
+   /etc/letsencrypt/live/beacandid.com/privkey.pem
+
+   Your cert will expire on 2018-03-04. To obtain a new or tweaked
+   version of this certificate in the future, simply run
+
+   letsencrypt-auto again. 
+
+To non-interactively renew *all* of your
+   certificates, run "letsencrypt-auto renew"
+
+
+
+1- ./certbot-auto revoke --cert-path archive/beacandid/cert1.pem
+
+certbot-auto certonly --standalone -d beacandid.com
+
+certbot-auto certonly --force-renew --cert-name beacandid.com
+
+certbot-auto certonly --standalone -d beacandid.com
+
+sudo ls /etc/letsencrypt/live/beacandid.com
+
+sudo -H ./letsencrypt-auto certonly --standalone --renew-by-default -d beacandid.com -d beacandid.com
+
+certbot certonly --webroot -w /var/www/example/ -d www.example.com -d example.com -w /var/www/other -d other.example.net -d another.other.example.net
+
+sudo service nginx start
+
+
+link
+
+https://www.linode.com/docs/security/ssl/install-lets-encrypt-to-create-ssl-certificates
+
