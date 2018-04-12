@@ -1,4 +1,9 @@
 renew Let's Encrypt certificate
+
+sudo service nginx stop
+sudo cerbot renew
+sudo certbot renew --dry-run
+
 key saved
 
 Congratulations! Your certificate and chain have been saved at:
