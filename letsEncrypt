@@ -1,7 +1,14 @@
 renew Let's Encrypt certificate
 
+sudo su
+service nginx stop
+
 certbot certonly --standalone -d beacandid.com -d developer.beacandid.com -d notification.beaca
 ndid.com -d www.beacandid.com
+
+service nginx start
+
+
 
 sudo service nginx stop
 sudo cerbot renew
