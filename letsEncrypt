@@ -1,4 +1,4 @@
-renew Let's Encrypt certificate
+renew Let's Encrypt certificate - tested on 12 th december 2018. working certificate
 
 sudo su
 service nginx stop
